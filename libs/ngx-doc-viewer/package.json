@@ -1,6 +1,6 @@
 {
-  "name": "ngx-doc-viewer",
-  "version": "2.0.5",
+  "name": "eloverde-doc-viewer",
+  "version": "1.0.0",
   "private": false,
   "license": "MIT",
   "description": "Angular document viewer.",
