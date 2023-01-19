@@ -1,30 +1,30 @@
 import {
+  AfterViewInit,
   Component,
+  ElementRef,
+  EventEmitter,
   Input,
   NgZone,
-  OnDestroy,
   OnChanges,
-  SimpleChanges,
+  OnDestroy,
   Output,
-  ViewChildren,
   QueryList,
-  ElementRef,
-  AfterViewInit,
+  SimpleChanges,
+  ViewChildren,
 } from '@angular/core';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
-import { EventEmitter } from '@angular/core';
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
+
 import {
   getDocxToHtml,
   getViewerDetails,
   googleCheckSubscription,
   iframeIsLoaded,
   isLocalFile,
-  replaceLocalUrl
+  replaceLocalUrl,
 } from './../../../helper';
-import {
-  IFrameReloader
-} from './../../../model';
+import { IFrameReloader } from './../../../model';
+
+// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
 // eslint-disable-next-line @typescript-eslint/naming-convention
 export type viewerType = 'google' | 'office' | 'mammoth' | 'pdf' | 'url';
 @Component({
@@ -43,8 +43,8 @@ export type viewerType = 'google' | 'office' | 'mammoth' | 'pdf' | 'url';
       }
       .overlay-popout-google {
         width: 40px;
-        height: 40px;
-        right: 26px;
+        height: 45px;
+        right: 12px;
         top: 11.5px;
         position: absolute;
         z-index: 1000;
