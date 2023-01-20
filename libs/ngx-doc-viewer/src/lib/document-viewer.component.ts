@@ -24,11 +24,8 @@ import {
 } from './../../../helper';
 import { IFrameReloader } from './../../../model';
 
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export type viewerType = 'google' | 'office' | 'mammoth' | 'pdf' | 'url';
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'ngx-doc-viewer',
   templateUrl: 'document-viewer.component.html',
   styles: [

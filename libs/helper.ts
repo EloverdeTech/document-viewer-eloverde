@@ -1,7 +1,6 @@
-// eslint-disable-next-line no-var
-declare var mammoth: any;
 import { IFrameReloader, ViewerType } from './model';
 
+declare var mammoth: any;
 export const fileToArray = (url: string): Promise<ArrayBuffer> => {
   return new Promise<ArrayBuffer>((resolve, reject) => {
     try {
@@ -24,18 +23,14 @@ export const fileToArray = (url: string): Promise<ArrayBuffer> => {
 
 const reloadIFrame = (iframe: HTMLIFrameElement) => {
   if (iframe) {
-    console.log('reloading..');
-    // eslint-disable-next-line no-self-assign
     iframe.src = iframe.src;
   }
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export const handleFileUpload = (fileInput: any) => {
   return new Promise<string>((resolve, reject) => {
     if (fileInput.target.files && fileInput.target.files[0]) {
       const reader = new FileReader();
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       reader.onload = (e: any) => {
         resolve(e.target.result);
       };
