@@ -15,7 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "ngx-doc-viewer": ["libs/ngx-doc-viewer/src/index.ts"]
+      "eloverde-doc-viewer": ["libs/eloverde-doc-viewer/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

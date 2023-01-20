@@ -21,12 +21,12 @@ import {
   iframeIsLoaded,
   isLocalFile,
   replaceLocalUrl,
-} from './../../../helper';
-import { IFrameReloader } from './../../../model';
+} from '../../../helper';
+import { IFrameReloader } from '../../../model';
 
 export type viewerType = 'google' | 'office' | 'mammoth' | 'pdf' | 'url';
 @Component({
-  selector: 'ngx-doc-viewer',
+  selector: 'eloverde-doc-viewer',
   templateUrl: 'document-viewer.component.html',
   styles: [
     `
@@ -69,7 +69,7 @@ export type viewerType = 'google' | 'office' | 'mammoth' | 'pdf' | 'url';
     `,
   ],
 })
-export class NgxDocViewerComponent implements OnChanges, OnDestroy, AfterViewInit {
+export class EloverdeDocViewerComponent implements OnChanges, OnDestroy, AfterViewInit {
   @Output() loaded: EventEmitter<void> = new EventEmitter();
   @Input() url = '';
   @Input() queryParams = '';

@@ -5,8 +5,8 @@
   "scripts": {
     "ng": "nx",
     "nx": "nx",
-    "build:ngx-doc-viewer": "nx build ngx-doc-viewer --prod",
-    "publish:ngx-doc-viewer": "npm run build:ngx-doc-viewer  && npm publish ./dist/libs/eloverde-doc-viewer --tag latest"
+    "build:eloverde-doc-viewer": "nx build eloverde-doc-viewer --prod",
+    "publish:eloverde-doc-viewer": "npm run build:eloverde-doc-viewer  && npm publish ./dist/libs/eloverde-doc-viewer --tag latest"
   },
   "private": true,
   "dependencies": {

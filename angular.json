@@ -36,21 +36,21 @@
         }
       }
     },
-    "ngx-doc-viewer": {
+    "eloverde-doc-viewer": {
       "projectType": "library",
-      "root": "libs/ngx-doc-viewer",
-      "sourceRoot": "libs/ngx-doc-viewer/src",
+      "root": "libs/eloverde-doc-viewer",
+      "sourceRoot": "libs/eloverde-doc-viewer/src",
       "prefix": "libtest",
       "architect": {
         "build": {
           "builder": "@nrwl/angular:package",
           "options": {
-            "tsConfig": "libs/ngx-doc-viewer/tsconfig.lib.json",
-            "project": "libs/ngx-doc-viewer/ng-package.json"
+            "tsConfig": "libs/eloverde-doc-viewer/tsconfig.lib.json",
+            "project": "libs/eloverde-doc-viewer/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "libs/ngx-doc-viewer/tsconfig.lib.prod.json"
+              "tsConfig": "libs/eloverde-doc-viewer/tsconfig.lib.prod.json"
             }
           }
         }
