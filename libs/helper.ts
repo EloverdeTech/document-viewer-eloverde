@@ -82,11 +82,14 @@ export const googleCheckSubscription = (): IFrameReloader => {
       if (!iframeIsLoaded(iframe)) {
         subscription = setInterval(() => {
           checkCount++;
+
           if (checkCount >= maxChecks) {
             clearInterval(subscription);
           }
+
           reloadIFrame(iframe);
         }, interval);
+
         return subscription;
       } else {
         if (subscription) {

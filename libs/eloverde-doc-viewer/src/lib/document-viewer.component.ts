@@ -71,6 +71,8 @@ export type viewerType = 'google' | 'office' | 'mammoth' | 'pdf' | 'url';
 })
 export class EloverdeDocViewerComponent implements OnChanges, OnDestroy, AfterViewInit {
   @Output() loaded: EventEmitter<void> = new EventEmitter();
+  @Output() onClose: EventEmitter<void> = new EventEmitter();
+
   @Input() url = '';
   @Input() queryParams = '';
   @Input() viewerUrl = '';
@@ -103,6 +105,8 @@ export class EloverdeDocViewerComponent implements OnChanges, OnDestroy, AfterVi
   }
 
   ngOnDestroy(): void {
+    this.onClose.emit();
+
     if (this.checkIFrameSubscription) {
       this.checkIFrameSubscription.unsubscribe();
     }
@@ -192,6 +196,7 @@ export class EloverdeDocViewerComponent implements OnChanges, OnDestroy, AfterVi
 
   private reloadIframe(iframe: HTMLIFrameElement) {
     this.checkIFrameSubscription = googleCheckSubscription();
+
     this.checkIFrameSubscription.subscribe(
       iframe,
       this.googleCheckInterval,
@@ -204,8 +209,11 @@ export class EloverdeDocViewerComponent implements OnChanges, OnDestroy, AfterVi
       ?.nativeElement as HTMLIFrameElement;
     if (iframe && iframeIsLoaded(iframe)) {
       this.loaded.emit(null);
+
       if (this.checkIFrameSubscription) {
         this.checkIFrameSubscription.unsubscribe();
+
+        this.checkIFrameSubscription = null;
       }
     }
   }
