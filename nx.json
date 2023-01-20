@@ -26,16 +26,7 @@
     "data": {
       "tags": []
     },
-    "demo-angular": {
-      "tags": []
-    },
-    "demo-react": {
-      "tags": []
-    },
     "ngx-doc-viewer": {
-      "tags": []
-    },
-    "react-documents": {
       "tags": []
     }
   },

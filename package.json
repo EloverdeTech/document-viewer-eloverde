@@ -4,22 +4,10 @@
   "license": "MIT",
   "scripts": {
     "ng": "nx",
-    "postinstall": "node ./decorate-angular-cli.js && ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points",
     "nx": "nx",
     "build:ngx-doc-viewer": "nx build ngx-doc-viewer --prod",
-    "build:react-documents": "rimraf ./dist/libs/react-documents && rollup -c",
-    "publish:react-documents": "npm run build:react-documents && npm publish ./dist/libs/react-documents --tag latest",
     "publish:ngx-doc-viewer": "npm run build:ngx-doc-viewer  && npm publish ./dist/libs/eloverde-doc-viewer --tag latest",
-    "publish-next:ngx-doc-viewer": "npm run build:ngx-doc-viewer && npm publish ./dist/libs/eloverde-doc-viewer --tag next",
-    "start:demo:angular": "nx serve demo-angular --port=4200",
-    "start:demo:react": "nx serve demo-react --port=4201",
-    "deploy:demo:angular": "firebase use angular-doc-viewer && firebase deploy --only hosting:demo-angular",
-    "deploy:demo:react": "firebase use angular-doc-viewer && firebase deploy --only hosting:demo-react",
-    "prepare-build": "node tools/scripts/prepare-build.ts ngx-doc-viewer",
-    "lint": "nx workspace-lint && ng lint",
-    "format:write": "nx format:write",
-    "update": "nx migrate latest",
-    "help": "nx help"
+    "lint": "nx workspace-lint && ng lint"
   },
   "private": true,
   "dependencies": {
