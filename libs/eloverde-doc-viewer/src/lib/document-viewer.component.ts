@@ -21,15 +21,12 @@ import {
   iframeIsLoaded,
   isLocalFile,
   replaceLocalUrl,
-} from './../../../helper';
-import { IFrameReloader } from './../../../model';
+} from '../../../helper';
+import { IFrameReloader } from '../../../model';
 
-// eslint-disable-next-line @nrwl/nx/enforce-module-boundaries
-// eslint-disable-next-line @typescript-eslint/naming-convention
 export type viewerType = 'google' | 'office' | 'mammoth' | 'pdf' | 'url';
 @Component({
-  // eslint-disable-next-line @angular-eslint/component-selector
-  selector: 'ngx-doc-viewer',
+  selector: 'eloverde-doc-viewer',
   templateUrl: 'document-viewer.component.html',
   styles: [
     `
@@ -72,7 +69,7 @@ export type viewerType = 'google' | 'office' | 'mammoth' | 'pdf' | 'url';
     `,
   ],
 })
-export class NgxDocViewerComponent implements OnChanges, OnDestroy, AfterViewInit {
+export class EloverdeDocViewerComponent implements OnChanges, OnDestroy, AfterViewInit {
   @Output() loaded: EventEmitter<void> = new EventEmitter();
   @Input() url = '';
   @Input() queryParams = '';

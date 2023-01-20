@@ -4,12 +4,6 @@
   "private": false,
   "license": "MIT",
   "description": "Angular document viewer.",
-  "author": {
-    "name": "Marcel Hoekstra",
-    "email": "marcel.hoekstra@outlook.com",
-    "url": "https://github.com/Marcelh1983/"
-  },
-  "homepage": "https://github.com/Marcelh1983/document-viewer/tree/main/libs/ngx-doc-viewer",
   "peerDependencies": {
     "@angular/core": ">= 10.0.0",
     "@angular/platform-browser": ">= 10.0.0",
