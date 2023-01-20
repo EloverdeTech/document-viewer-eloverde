@@ -6,8 +6,6 @@
       "devDependencies": "*"
     },
     "tsconfig.base.json": "*",
-    "tslint.json": "*",
-    ".eslintrc.json": "*",
     "nx.json": "*"
   },
   "affected": {
@@ -18,7 +16,7 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": ["build", "test", "e2e"]
       }
     }
   },

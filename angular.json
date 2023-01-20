@@ -5,42 +5,14 @@
   },
   "defaultProject": "demo",
   "schematics": {
-    "@nrwl/angular": {
-      "application": {
-        "linter": "eslint"
-      },
-      "library": {
-        "linter": "eslint"
-      },
-      "storybook-configuration": {
-        "linter": "eslint"
-      }
-    },
     "@nrwl/angular:application": {
-      "style": "scss",
-      "linter": "eslint",
-      "e2eTestRunner": "cypress"
+      "style": "scss"
     },
     "@nrwl/angular:library": {
-      "style": "scss",
-      "linter": "eslint"
+      "style": "scss"
     },
     "@nrwl/angular:component": {
       "style": "scss"
-    },
-    "@nrwl/react": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint",
-        "babel": true
-      },
-      "component": {
-        "style": "scss"
-      },
-      "library": {
-        "style": "scss",
-        "linter": "eslint"
-      }
     }
   },
   "projects": {
@@ -61,14 +33,6 @@
               "tsConfig": "libs/data/tsconfig.lib.prod.json"
             }
           }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/data/**/*.ts"
-            ]
-          }
         }
       }
     },
@@ -88,15 +52,6 @@
             "production": {
               "tsConfig": "libs/ngx-doc-viewer/tsconfig.lib.prod.json"
             }
-          }
-        },
-        "lint": {
-          "builder": "@nrwl/linter:eslint",
-          "options": {
-            "lintFilePatterns": [
-              "libs/ngx-doc-viewer/src/**/*.ts",
-              "libs/ngx-doc-viewer/src/**/*.html"
-            ]
           }
         }
       }
