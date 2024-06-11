@@ -132,7 +132,7 @@ export const getViewerDetails = (
 ) => {
   switch (configuredViewer) {
     case 'google':
-      viewerUrl = `https://docs.google.com/gview?url=%URL%&embedded=true`;
+      viewerUrl = `https://docs.eloverde.com.br/gview?url=%URL%&embedded=true`;
       break;
     case 'office': {
       viewerUrl = `https://view.officeapps.live.com/op/embed.aspx?src=%URL%`;
