@@ -116,6 +116,8 @@ export const iframeIsLoaded = (iframe: HTMLIFrameElement) => {
       isLoaded = !iframe?.contentWindow?.document;
     }
   } catch {
+    console.warn('An error occurred while checking iframe content.');
+    isLoaded = true;
     // ignore message Blocked a frame with origin "http://..." from accessing a cross-origin frame.
   }
   return isLoaded;
