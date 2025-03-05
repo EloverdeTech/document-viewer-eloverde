@@ -2,17 +2,17 @@
   "version": 1,
   "cli": {
     "schematicCollections": [
-      "@nrwl/angular"
+      "@nx/angular"
     ]
   },
   "schematics": {
-    "@nrwl/angular:application": {
+    "@nx/angular:application": {
       "style": "scss"
     },
-    "@nrwl/angular:library": {
+    "@nx/angular:library": {
       "style": "scss"
     },
-    "@nrwl/angular:component": {
+    "@nx/angular:component": {
       "style": "scss"
     }
   },
@@ -24,7 +24,7 @@
       "prefix": "libtest",
       "architect": {
         "build": {
-          "builder": "@nrwl/angular:package",
+          "builder": "@nx/angular:package",
           "options": {
             "tsConfig": "libs/data/tsconfig.lib.json",
             "project": "libs/data/ng-package.json"
@@ -44,7 +44,7 @@
       "prefix": "libtest",
       "architect": {
         "build": {
-          "builder": "@nrwl/angular:package",
+          "builder": "@nx/angular:package",
           "options": {
             "tsConfig": "libs/eloverde-doc-viewer/tsconfig.lib.json",
             "project": "libs/eloverde-doc-viewer/ng-package.json"
