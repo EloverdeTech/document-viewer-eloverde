@@ -1,9 +1,10 @@
 {
   "version": 1,
   "cli": {
-    "defaultCollection": "@nrwl/angular"
+    "schematicCollections": [
+      "@nrwl/angular"
+    ]
   },
-  "defaultProject": "demo",
   "schematics": {
     "@nrwl/angular:application": {
       "style": "scss"
