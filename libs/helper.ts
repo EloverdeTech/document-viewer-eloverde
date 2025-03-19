@@ -134,7 +134,7 @@ export const getViewerDetails = (
 ) => {
   switch (configuredViewer) {
     case 'google':
-      viewerUrl = `https://docs.eloverde.com.br/gview?url=%URL%&embedded=true`;
+      viewerUrl = `https://docs.google.com/gview?url=%URL%&embedded=true`;
       break;
     case 'office': {
       viewerUrl = `https://view.officeapps.live.com/op/embed.aspx?src=%URL%`;
@@ -145,6 +145,7 @@ export const getViewerDetails = (
       break;
     }
   }
+
   const externalViewer =
     configuredViewer === 'google' ||
     configuredViewer === 'office' ||
@@ -152,10 +153,12 @@ export const getViewerDetails = (
 
   const u = url?.indexOf('/') ? encodeURIComponent(url) : url;
   let fullUrl = viewerUrl ? viewerUrl.replace('%URL%', u) : url;
+
   if (queryParams && externalViewer && configuredViewer !== 'url') {
     const start = queryParams.startsWith('&') ? '' : '&';
     fullUrl = `${fullUrl}${start}${queryParams}`;
   }
+
   return {
     url: fullUrl,
     externalViewer,
